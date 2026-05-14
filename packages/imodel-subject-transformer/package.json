@@ -1,0 +1,33 @@
+{
+  "name": "imodel-subject-transformer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CLI tool that reads elements from an existing iModel and inserts matching subjects into a new Snapshot iModel.",
+  "bin": {
+    "imodel-subject-transformer": "dist/main.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\""
+  },
+  "engines": {
+    "node": "^20.0.0 || ^22.0.0 || ^24.0.0"
+  },
+  "dependencies": {
+    "@itwin/core-backend": "^5.9.2",
+    "@itwin/core-bentley": "^5.9.2",
+    "@itwin/core-common": "^5.9.2",
+    "cli-progress": "^3.12.0",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/node": "^25.7.0",
+    "@types/yargs": "^17.0.35",
+    "typescript": "^6.0.3"
+  }
+}
