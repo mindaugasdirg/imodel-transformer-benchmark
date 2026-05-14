@@ -1,3 +1,4 @@
 packages:
   - packages/snapshot-subject-generator
   - packages/imodel-subject-transformer
+  - packages/imodel-transformer-cli

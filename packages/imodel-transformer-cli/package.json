@@ -1,0 +1,35 @@
+{
+  "name": "imodel-transformer-cli",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CLI tool that runs a full iModel transformation using @itwin/imodel-transformer with Detached Element Aspect strategy.",
+  "bin": {
+    "imodel-transformer-cli": "dist/main.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\""
+  },
+  "engines": {
+    "node": "^22.12.0"
+  },
+  "dependencies": {
+    "@itwin/core-backend": "^5.9.2",
+    "@itwin/core-bentley": "^5.9.2",
+    "@itwin/core-common": "^5.9.2",
+    "@itwin/core-geometry": "^5.9.2",
+    "@itwin/core-quantity": "^5.9.2",
+    "@itwin/ecschema-metadata": "^5.9.2",
+    "@itwin/imodel-transformer": "2.0.0-dev.12",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "@types/yargs": "^17.0.35",
+    "typescript": "^6.0.3"
+  }
+}
